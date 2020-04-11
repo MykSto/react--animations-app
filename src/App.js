@@ -20,11 +20,11 @@ const App = () => {
       <h1>React Animations</h1>
       <button onClick={() => setShow(prevState => ({ ...prevState, showBlog: !prevState.showBlog }))}>toggle</button>
       <Transition
-        in={show.showBlog} 
+        in={show.showBlog}
         timeout={1000}
         mountOnEnter
         unmountOnExit
-        >
+      >
         {show => (
           <div style={{
             backgroundColor: "red",
@@ -39,7 +39,8 @@ const App = () => {
         }
       </Transition>
       <br />
-      {show.modalIsOpen && <Modal show={show.modalIsOpen} closed={() => setShow({ modalIsOpen: false })} />}
+
+      <Modal show={show.modalIsOpen} closed={() => setShow({ modalIsOpen: false })} />
       {show.modalIsOpen && <Backdrop show={show.modalIsOpen} />}
       <button className="Button" onClick={() => setShow({ modalIsOpen: true })}>Open Modal</button>
       <h3>Animating Lists</h3>
