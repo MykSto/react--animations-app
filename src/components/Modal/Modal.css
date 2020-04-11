@@ -50,3 +50,19 @@
         transform: translateY(-200%);
     }
 }
+
+.fade-slide-enter {
+    
+}
+
+.fade-slide-enter-active {
+    animation: openModal 0.4s ease-in forwards;
+}
+
+.fade.slide-exit {
+
+}
+
+.fade-exit-active {
+    animation: closeModal 0.4s ease-in-out forwards;
+}
